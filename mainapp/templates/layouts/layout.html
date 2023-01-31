@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}
+        {% endblock %}
+        | Rammer Gomez</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+    <link rel="icon" href="{% static 'images/ico.ico' %}"/>
+    
+</head>
+
+<body>
+
+    <header>
+
+        <div id="logotipo">
+            <img src="{% static '/images/cabecera.png'%}"/>  
+        </div>
+
+    </header>
+
+    <nav>
+
+        <ul>
+            <li>
+                <a href="{% url 'Inicio' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Eventos</a>
+                <ul> 
+                    {%for category in categories%}
+                        <li><a href="{% url 'category' category.0 %}">{{category.1}}</a></li>                   
+                    {% endfor %}
+                </ul>
+            </li>
+        
+            <li>
+                <a href="#">Visitanos</a>
+                <ul> 
+                    <li><a href="{%url 'local_list'%}">Todos</a></li>
+                    {%for local in locales_list%}
+                        <li><a href="{% url 'local' local.0 %}">{{local.1}}</a></li>                   
+                    {% endfor %}
+                </ul>
+            </li>
+
+            {%for page in pages%}
+                <li><a href="{% url 'Page' page.2%}">{{page.1}}</a></li>                   
+            {% endfor %}
+
+        </ul>
+
+    </nav>
+
+    <div class="barra">
+        <span class="esquina_izquierda"></span>
+        <span class="relleno_barra"></span>
+        <span class="esquina_derecha"></span>
+    </div>
+
+    <div class="box">
+        {% block content %}
+    
+        {% endblock %}
+    </div>
+
+</div>
+
+<footer>
+    Professional Skills &copy; Rammer Gomez. {% now "DATE_FORMAT" %}
+</footer>
+</body>
+
+</html>

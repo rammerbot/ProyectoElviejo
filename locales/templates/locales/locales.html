@@ -1,0 +1,25 @@
+{% extends 'layouts/layout.html' %}
+{%load static%}
+
+{% block title%}
+    {{local.local}}
+{% endblock %}
+{%block content%}
+
+{%for local in local%}
+    <h1 class="titulo_articulo">{{local.local}}</h1>
+
+    <br>        
+    <p class="articulo_completo">
+        {{local.descripcion|safe}}
+    </p>
+    <br>
+    
+    <img aling="right" class="imagen_articulo" src="{{local.imagen.url}}"/>
+ 
+
+    <a target="_blank" href="{{local.mapa}}">
+        Ubicacion.Google.Maps
+    </a>
+    {% endfor %}
+{%endblock%}

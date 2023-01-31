@@ -1,0 +1,417 @@
+/*estilos generales*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+
+/*estilos del cuerpo */
+
+body{
+
+    background-color: #F2F2F2;
+    background-image: url(fondot.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/*estilos de la cabecera */
+
+header{
+    width: 1212px;
+    height: 140px;
+    background: #23282B;
+    margin: 0 auto;
+    animation: header 10s infinite;
+}
+
+@keyframes header{
+
+    20%{box-shadow: 0px 22px 22px purple;}
+    40%{box-shadow: 0px 22px 22px yellow;}
+    60%{box-shadow: 0px 22px 22px green;}
+    80%{box-shadow: 0px 22px 22px blue;}
+    100%{box-shadow: 0px 22px 22px red;}
+}
+
+#logotipo img{
+    display: block;
+    width: 1212px;
+    float: left;
+    
+}
+
+#logotipo h1{
+    display: block;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-weight: 100;
+    color: #a65100;
+    float: left;
+
+}
+
+#logotipo{
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+nav{
+    width: 95%;
+    height: 40px;
+    background-color: #1b1e1f;
+    border: 1px solid #333333;
+    margin: 0 auto;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+    animation: nav 10s infinite;
+}
+
+@keyframes nav{
+
+    20%{box-shadow: 0px 22px 22px purple;}
+    40%{box-shadow: 0px 22px 22px yellow;}
+    60%{box-shadow: 0px 22px 22px green;}
+    80%{box-shadow: 0px 22px 22px blue;}
+    100%{box-shadow: 0px 22px 22px red;}
+}
+
+
+nav > ul > li{
+    line-height:  40px;
+    float: left;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav > ul > li a{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #d1d4d6;
+}
+
+nav > ul > li > a:hover{
+    background: #8228bf;
+    box-shadow: 0px 0px 5px #333333 inset;
+}
+
+nav > ul > li > ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+}
+nav > ul > li:hover > ul{
+    display: block;
+    color: white;
+    margin: 0px;
+}
+
+nav > ul > li:hover > ul > li{
+    background: #f2f1f0;
+    border-bottom:1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+nav > ul > li:hover > ul > li a{
+    color: #666;
+}
+
+nav > ul > li:hover > ul > li:hover{
+    background: #8228bf;
+}
+
+nav > ul > li:hover > ul > li:hover a{
+   display: block;
+    color: white;
+   
+}
+
+.esquina_izquierda{
+
+    display: block;
+    border-left: 30px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: left;
+}
+
+.barra{
+    
+    width: 97%;
+    margin: 0 auto;
+}
+
+.relleno_barra{
+    display: block;
+    width: 95%;
+    height: 10px;
+    background: #282f30;
+    float: left;
+}
+.esquina_derecha{
+
+    display: block;
+    border-right: 30px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: right;
+}
+
+
+
+#content{
+
+    
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+div .contenedor {
+    display: flex;
+    width: 400px;
+    height: 40px;
+    font-size: 40px;
+    line-height: 40px;
+
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+}
+div .contenedor > ul {
+    list-style: none;
+    padding-left: 10px;
+    animation: cambiar 7s infinite ;
+}
+
+
+@keyframes cambiar {
+
+    0%{margin-top: 0px;}
+    
+    20%{margin-top: 0px;color: red;}
+
+    50%{margin-top: -40px;color: purple;}
+    
+    100%{margin-top: -80px;color: green;}
+
+}
+
+ul, p {
+    margin-top: -6px;
+}
+
+div .slider{
+    width: 95%;
+    margin: auto;
+    padding: 0%;
+    margin-top: 10px;
+    overflow: hidden;
+
+}
+div .slider ul{
+    display: flex;
+   padding:0%;
+    width: 200%;
+    animation: slider 8s infinite;
+
+
+}
+
+@keyframes slider{
+    0%{margin-left: 0;}
+    45%{margin-left: 0;}
+    50%{margin-left: -1212px;}
+    100%{margin-left: -1212px;}
+
+}
+
+div .slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.box{
+    display: block;
+    width: 90%;
+    min-height: 930px;
+    background-color: rgba(255, 255, 255, 0.682);
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 22px 22px gray;
+    overflow: auto;
+    margin-top: 30px;
+
+
+}
+
+
+p{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.messages{
+    color: white;
+    background-color: green;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.title{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    
+}
+
+.article_item{
+  
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    clear: both;
+    
+    
+  
+}
+
+.article_item .imagen{
+  
+    width: 200px;
+    height: 200px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: gray 0px 15px 15px;
+    overflow: hidden;
+
+
+}
+
+.article_item .imagen:hover{
+    
+    box-shadow: purple 0px 5px 15px;
+    height: 210px;
+    width: 210px;
+    transition: 1ms;
+}
+
+.article_item .imagen:hover img{
+    width: 210px;
+    height: 210px;
+}
+
+
+.article_item .imagen img{
+
+    width: 200px;
+    height: 200px;
+
+}
+
+.article_item .data{
+    width: 500px;
+    height: 150px;
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+    overflow:hidden;
+    
+
+}
+
+.di-articulo{
+    width: 500px;
+    height: 63px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+}
+
+.article_item .data h2 a{
+    display: block;
+    font-size: 20px;
+    color: rgb(12, 130, 28);
+    margin-bottom: 5px;
+    
+}
+
+.titulo_articulo{
+    color: rgb(113, 90, 90);
+}
+
+
+.imagen_articulo{
+
+    width: 400px;
+    height: 550px;
+    width: 400px;
+    height: 550px;
+    border-radius: 7px;
+
+}
+
+.articulo_completo{
+
+   color: #333333;
+   font: cambria georgia veranda;
+
+}
+
+.date_articulo{
+
+    color: gray;
+    font-size: 13px;
+    float: right;
+}
+
+footer{
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 20px gray;
+    margin: 0 auto;
+}
+
+
+
+
+
+

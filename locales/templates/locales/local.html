@@ -1,0 +1,32 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title%}
+    {{titulo}}
+{% endblock %}
+
+{%block content%}
+
+    <h1 class="title">{{titulo}}</h1>
+   
+    {%for local in locales%}
+    
+    <article class="article_item">
+
+        <div class="imagen">
+            <a  href="{% url 'local' local.id %}"><img src="{{local.imagen.url}}"/></a>
+        </div>
+      
+        <div class="data">
+            <h2><a href="{% url 'local' local.id%}">{{local.local}}</a></h2>
+            <span class=date>
+                <a target= "_blank" href="{{local.mapa}}">Ubicacion.Google.Maps</a>
+            </span>
+        <div class="di-articulo">
+            <p>{{local.descripcion|safe}}</p>
+        </div>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    {%endfor%}
+
+{%endblock%}

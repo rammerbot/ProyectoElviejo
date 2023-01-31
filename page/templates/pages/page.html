@@ -1,0 +1,19 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title%}
+    {{page.title}}
+{% endblock %}
+{%block content%}
+    <h1 class="title">{{page.title}}</h1>
+
+    <br>
+
+    <p>
+        {{page.content|safe}}
+    </p>
+
+    <br>
+
+    <span class="date">{{page.create_at}}</span>
+{%endblock%}
+

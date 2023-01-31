@@ -1,0 +1,29 @@
+{%for articulo in articulos%}
+
+    <article class="article_item">
+
+        {%if articulo.image != "null" and articulo.image.url|length >= 1 %}
+        <div class="imagen">
+            <img src="{{articulo.image.url}}"/>
+        </div>
+        {%endif%}
+
+        <div class="data">
+            <h2><a href="{% url "articulo" articulo.id %}">{{articulo.title}}</a></h2>
+            <span class="date">
+                {%for categoria in articulo.category.all%}
+    
+                    <a href="{% url 'category' categoria.id%}" >{{categoria}}</a>
+
+                    {%if forloop.counter < articulo.category.all|length%}
+                        {{"-"}}
+                    {%endif%}
+                {%endfor%}
+                |
+                {{articulo.create_at}}
+            </span>
+            <p>{{articulo.content|safe}}</p>
+        </div>
+    </article>
+
+{%endfor%}

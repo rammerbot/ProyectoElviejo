@@ -1,0 +1,21 @@
+{% extends 'layouts/layout.html' %}
+{%load static%}
+
+{% block title%}
+    {{article.title}}
+{% endblock %}
+{%block content%}
+    <h1 class="titulo_articulo">{{article.title}}</h1>
+
+    <br>        
+    <p class="articulo_completo">
+        {{article.content|safe}}
+    </p>
+    <br>
+    {%if article.image != "null" and article.image.url|length >= 1 %}
+        <img aling="right" class="imagen_articulo" src="{{article.image.url}}"/>
+    {%endif%}
+
+    <span class="date_articulo">{{article.create_at}}</span>
+{%endblock%}
+
